@@ -36,7 +36,7 @@ static PyObject *VectorToList_Float( const std::vector<float> &data )
         if( !num )
         {
             Py_DECREF( listObj );
-            throw std::logic_error( "Unable to allocate memory for Python list" );
+            throw std::logic_error( "Unable to allocate memory for Python list item" );
         }
 
         PyList_SetItem( listObj, i, num );
@@ -59,7 +59,7 @@ static PyObject *VectorToList_Long( const std::vector<long> &data )
         if( !num )
         {
             Py_DECREF( listObj );
-            throw std::logic_error( "Unable to allocate memory for Python list" );
+            throw std::logic_error( "Unable to allocate memory for Python list item" );
         }
 
         PyList_SetItem( listObj, i, num );
@@ -82,7 +82,7 @@ static PyObject *VectorToList_String( const std::vector<std::string> &data )
         if( !string )
         {
             Py_DECREF( listObj );
-            throw std::logic_error( "Unable to allocate memory for Python string list" );
+            throw std::logic_error( "Unable to allocate memory for Python string list item" );
         }
 
         PyList_SetItem( listObj, i, string );
@@ -105,7 +105,7 @@ static PyObject *ArrayToList_float( const double *aArray, const unsigned int aSi
         if( !num )
         {
             Py_DECREF( listObj );
-            throw std::logic_error( "Unable to allocate memory for Python list" );
+            throw std::logic_error( "Unable to allocate memory for Python list item" );
         }
 
         PyList_SetItem( listObj, i, num );
