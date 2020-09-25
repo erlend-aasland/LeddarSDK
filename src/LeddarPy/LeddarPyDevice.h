@@ -66,7 +66,6 @@ typedef struct sLeddarDevice
 
     size_t v, h;
     float v_fov, h_fov;
-    std::string mIP;
 } sLeddarDevice;
 
 
@@ -230,7 +229,7 @@ static PyMethodDef Device_methods[] =
 //Object declaration for python
 static PyTypeObject LeddarDeviceType =
 {
-    PyVarObject_HEAD_INIT( NULL, 0 )
+    PyObject_HEAD_INIT( NULL )
     "leddar.Device",              //tp_name
     sizeof( sLeddarDevice ),        //tp_basicsize
     0,                              //tp_itemsize
